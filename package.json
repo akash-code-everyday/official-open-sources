@@ -1,0 +1,63 @@
+{
+  "name": "zoom-canvas-engine",
+  "version": "0.1.0",
+  "description": "A high-performance zoom & pan engine for Konva.js + React. Pointer-aware zooming, center-based zoom, fit-to-content, controlled/uncontrolled modes.",
+  "author": "Akash Tiwari | akashudayraj.in@gmail.com",
+  "license": "MIT",
+  "keywords": [
+    "konva",
+    "react-konva",
+    "zoom",
+    "pan",
+    "canvas",
+    "pinch-zoom",
+    "react",
+    "stage",
+    "zoom-controls"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build",
+    "lint": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "konva": ">=9.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "react-konva": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "konva": "^10.2.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-konva": "^19.2.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.0"
+  }
+}
